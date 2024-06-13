@@ -7,7 +7,7 @@ public abstract class VendingMachine {
 
     protected List<Product> products;
 
-    public VendingMachine() {
+    public VendingMachine(int name, int volume, int temperature) {
         this.products = new ArrayList<>();
     }
 
@@ -47,6 +47,10 @@ public abstract class VendingMachine {
 //    }
 
     public List<Product> getProducts() {
+        return products;
+    }
+
+    public List<Product> getProducts(int name, int volume, int temperature) {
         return products;
     }
 }

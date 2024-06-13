@@ -17,13 +17,15 @@ public class ProductMain {
         Product bottle2 = new BottleOfWater("Родники Газированная", 55, LocalDate.of(2024, 5, 1),
                 true, EPackage.GLASS.getMaterial(), 0.5F);
 
+        HotDrinkVM bottle3 = new HotDrinkVM(5, 1, 70);
+
         VendingMachine vm = new WaterVendingMachine();
 
-        VendingMachine vm1 = new HotDrinkVM();
+        VendingMachine vm1 = new HotDrinkVM(0, 0, 0);
 
         System.out.println(vm.getProducts());
 
-        vm.addProducts(List.of(bottle1, bottle1, bottle1, bottle2, bottle2, bottle2));
+        vm.addProducts(List.of(bottle1, bottle1, bottle1, bottle2, bottle2, bottle2, bottle3, bottle3, bottle3));
 
         vm1.addProducts(new ArrayList<>());
 
